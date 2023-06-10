@@ -17,7 +17,7 @@ public class PagoTests {
     @Test
     public void testGetCliente() {
         Cliente cliente = new Cliente("89312", "Pepe el Hongo");
-        Pago pago = new Pago(cliente);
+        Pago pago = new Pago("43892", cliente, 58391.3);
 
         assertNotNull(pago.getCliente());
     }
