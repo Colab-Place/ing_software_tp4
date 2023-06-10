@@ -32,7 +32,7 @@ public class CarritoTests {
   public void validarNombreItemsDeCarritoNoVacio() {
     /* Arrange */
     Carrito carrito = new Carrito();
-    Item item = new Item(1, null, 1, 1.00);
+    Item item = new Item(1, "testItems", 1, 1.00);
     /* Act */
     carrito.addItem(item);
     /* Assert */
