@@ -6,31 +6,31 @@ import org.junit.Test;
 
 public class ItemTests {
   @Test
-  public void validarNombreClaseItem() {
+  public void testItem() {
     Item item = new Item();
     assertNotNull(item);
   }
 
   @Test
-  public void validarCodItemNoNulo() {
+  public void testGetCod() {
     Item item = new Item(1, "testItem", 1, 1.00);
     assertNotNull(item.getCod());
   }
 
   @Test
-  public void validarNombreItemNoNulo() {
+  public void testGetName() {
     Item item = new Item(1, "testItem", 1, 1.00);
     assertNotNull(item.getName());
   }
 
   @Test
-  public void validarCantidadItemNoNulo() {
+  public void testGetCantidad() {
     Item item = new Item(1, "testItem", 1, 1.00);
     assertNotNull(item.getCantidad());
   }
 
   @Test
-  public void validarPrecioItemNoNulo() {
+  public void testGetPrecio() {
     Item item = new Item(1, "testItem", 1, 1.00);
     assertNotNull(item.getPrecio());
   }

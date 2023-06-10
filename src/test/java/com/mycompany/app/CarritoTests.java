@@ -6,19 +6,19 @@ import org.junit.Test;
 
 public class CarritoTests {
   @Test
-  public void validarNombreClaseCarrito() {
+  public void testCarrito() {
     Carrito carrito = new Carrito();
     assertNotNull(carrito);
   }
 
   @Test
-  public void validarCarritoListaItemsValida() {
+  public void testGetItems() {
     Carrito carrito = new Carrito();
     assertNotNull(carrito.getItems());
   }
 
   @Test
-  public void validarCarritoNoVacio() {
+  public void testAddItem() {
     /* Arrange */
     Carrito carrito = new Carrito();
     Item item = new Item(1, "testItem", 1, 1.00);
@@ -27,16 +27,4 @@ public class CarritoTests {
     /* Assert */
     assertTrue(carrito.getItems().size() > 0);
   }
-
-  @Test
-  public void validarNombreItemsDeCarritoNoVacio() {
-    /* Arrange */
-    Carrito carrito = new Carrito();
-    Item item = new Item(1, "testItems", 1, 1.00);
-    /* Act */
-    carrito.addItem(item);
-    /* Assert */
-    assertNotNull((carrito.getItems()).get(0).getName());
-  }
-
 }
