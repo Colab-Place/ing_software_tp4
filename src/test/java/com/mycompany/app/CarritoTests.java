@@ -27,9 +27,4 @@ public class CarritoTests {
     /* Assert */
     assertTrue(carrito.getItems().size() > 0);
   }
-
-  @Test
-  public void validarCarritoNoTieneItemsIguales() {
-
-  }
 }
