@@ -1,0 +1,39 @@
+# Nombre del Workflow
+name: build
+
+# Evento que provoca la ejecución del workflow 
+on: push
+
+# Un Workflow es un conjunto de jobs que corren en paralelo
+jobs:
+
+  # el job se llama run_tests
+  run_tests:
+
+    # máquina virtual en la que corre
+    runs-on: ubuntu-latest
+
+    # un job es un conjunto de steps que se ejecutan de forma secuencial y ordenada
+    steps:
+
+      # nombre del step
+      - name: Checkout the repository
+
+      # ejecución de una acción predefinida de GitHub Actions
+        uses: actions/checkout@v3
+      - name: Set up JDK 18
+        uses: actions/setup-java@v1
+        with:
+          java-version: 18
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+
+        # cosas de Maven
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+        # correr tests
+      - name: Run tests with Maven
+        run: mvn -B test --file pom.xml
