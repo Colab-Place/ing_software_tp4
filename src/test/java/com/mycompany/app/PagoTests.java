@@ -29,7 +29,5 @@ public class PagoTests {
         pago.setCliente(cliente);
 
         assertEquals(pago.getCliente(),cliente);
-
-
     }
 }
