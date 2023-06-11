@@ -10,7 +10,7 @@ public class Carrito {
   }
 
   public void addItem(Item item) {
-    // items.add(item);
+    items.add(item);
   }
 
   public ArrayList<Item> getItems() {
