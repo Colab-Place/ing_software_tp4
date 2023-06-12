@@ -2,7 +2,9 @@
 name: build
 
 # Evento que provoca la ejecución del workflow 
-on: push
+on:
+  push:
+  pull_request:
 
 # Un Workflow es un conjunto de jobs que corren en paralelo
 jobs:
