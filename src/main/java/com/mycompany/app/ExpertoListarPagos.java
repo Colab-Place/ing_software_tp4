@@ -74,6 +74,9 @@ public class ExpertoListarPagos {
         this.pagos = pagos;
     }
 
+    public void borrar_este_metodo_xd() {
+        System.out.println("soy el dylan xd");
+    }
     
 
 
